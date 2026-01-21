@@ -30,7 +30,108 @@ img {
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     overflow: hidden;
 }
+/* --- SECCIÓN ESTILO POPULAR/CHUNGO --- */
+.seccion-testimonios-barrio {
+    background-color: #000000; /* Negro puro */
+    border-top: 5px solid #ff0000; /* Borde rojo fuerte arriba */
+    border-bottom: 5px solid #ff0000;
+    padding: 50px 15px;
+    font-family: 'Arial', sans-serif; /* Fuente genérica */
+    text-align: center;
+}
 
+.titulo-chungo {
+    color: #ffff00; /* Amarillo puro chillón */
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 0px #ff0000; /* Sombra dura roja */
+    border-bottom: 2px dashed #ffff00;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.contenedor-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- TARJETA --- */
+.tarjeta-chunga {
+    background: linear-gradient(to bottom, #333333, #000000); /* Degradado simple */
+    width: 100%;
+    max-width: 320px;
+    padding: 20px;
+    
+    /* El toque "chungo": Borde con relieve estilo Windows 95 o web antigua */
+    border: 3px ridge #d4af37; 
+    border-radius: 10px;
+    
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3); /* Resplandor rojo difuso */
+    margin-bottom: 20px;
+}
+
+/* --- FOTO --- */
+.marco-foto {
+    width: 100px;
+    height: 100px;
+    margin: -50px auto 15px auto; /* Sacar la foto hacia arriba */
+    background: #000;
+    border-radius: 50%;
+    border: 4px solid #ffff00; /* Borde amarillo fuerte */
+    overflow: hidden;
+}
+
+.foto-chunga {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Sin filtros artísticos, foto cruda o con mucho contraste */
+    filter: contrast(1.2); 
+}
+
+/* --- TEXTOS --- */
+.texto-testimonio {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.4;
+    font-style: normal; /* Sin cursiva, directo */
+    background-color: #1a1a1a; /* Fondo en el texto para leerse mejor */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+}
+
+.nombre-cliente {
+    color: #ff0000; /* Rojo */
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+.estrellas {
+    font-size: 20px;
+    margin-top: 5px;
+    /* Las estrellas son emojis en el HTML, aquí solo ajustamos tamaño */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .contenedor-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tarjeta-chunga {
+        max-width: 95%;
+        margin-top: 30px; /* Espacio extra por la foto que sobresale */
+    }
+}
 /* Simple Star Animation using multiple box shadows */
 /* To keep CSS file size manageable, we use a simple repeating radial gradient animation */
 #stars, #stars2, #stars3 {
