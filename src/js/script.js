@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
             boldWord.innerText = word;
             // Add click event to scroll to contact or open whatsapp
             boldWord.addEventListener('click', () => {
-                 window.open("https://wa.me/+12545956299?text=Hola,%20me%20interesa%20saber%20m%C3%A1s%20sobre: " + encodeURIComponent(word), "_blank");
+                 window.open("https://wa.me/+14802439808?text=Hola,%20me%20interesa%20saber%20m%C3%A1s%20sobre: " + encodeURIComponent(word), "_blank");
             });
             container.appendChild(boldWord);
             container.appendChild(document.createTextNode(" "));
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // WhatsApp Floating Button Logic
     const whatsappContainer = document.getElementById("whatsapp-container");
     if (whatsappContainer) {
-        const whatsappLink = "https://wa.me/+12545956299?text=NECESITO%20AYUDA";
+        const whatsappLink = "https://wa.me/+14802439808?text=NECESITO%20AYUDA";
         whatsappContainer.addEventListener("click", function() {
             window.open(whatsappLink, "_blank");
         });
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
             g.preventDefault();
             const name = document.getElementById("name")?.value || "";
             const message = document.getElementById("message")?.value || "";
-            const h = "https://api.whatsapp.com/send?phone=19154004296&text=Hola " + encodeURIComponent(name) + "! " + encodeURIComponent(message);
+            const h = "https://api.whatsapp.com/send?phone=14802439808&text=Hola " + encodeURIComponent(name) + "! " + encodeURIComponent(message);
             window.open(h);
         });
     }
