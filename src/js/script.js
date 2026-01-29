@@ -12,4 +12,34 @@ document.addEventListener("DOMContentLoaded", () => {
       window.open("https://wa.link/2j1mu9", "_blank", "noopener");
     });
   }
+
+  // Optimize Video Loading and Playback
+  const videos = document.querySelectorAll("video");
+  
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Video is in view, try to play
+        const video = entry.target;
+        if (video.paused) {
+          video.play().catch(error => {
+            // Autoplay might be blocked by browser
+            console.log("Autoplay blocked:", error);
+          });
+        }
+      } else {
+        // Video is out of view, pause it to save resources
+        const video = entry.target;
+        if (!video.paused) {
+          video.pause();
+        }
+      }
+    });
+  }, {
+    threshold: 0.2 // Play when 20% of the video is visible
+  });
+
+  videos.forEach(video => {
+    videoObserver.observe(video);
+  });
 });

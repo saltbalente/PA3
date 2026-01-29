@@ -6,6 +6,8 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   build: {
     sourcemap: 'hidden',
+    minify: 'esbuild',
+    cssMinify: true,
   },
   plugins: [
     react(),

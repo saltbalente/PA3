@@ -59,6 +59,7 @@ a {
   filter: blur(60px);
   opacity: 0.4;
   background: radial-gradient(circle, rgba(212, 168, 83, 0.2), transparent 65%);
+  will-change: transform;
 }
 
 .orb-one {
@@ -305,7 +306,13 @@ main {
 }
 
 /* ========== HERO SECTION ========== */
+section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 500px;
+}
+
 .hero {
+  content-visibility: visible;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
@@ -503,6 +510,7 @@ main {
   border-radius: 50%;
   pointer-events: none;
   z-index: 3;
+  will-change: transform, opacity;
 }
 
 .hero-orb-1 {
